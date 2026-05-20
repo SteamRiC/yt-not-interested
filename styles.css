@@ -1,0 +1,20 @@
+/*
+ * yt-not-interested styles.
+ *
+ * v0 stub. Real placement, sizing, and theming land in the next session
+ * alongside the content script implementation. See architecture.md
+ * "CSS approach" for the design.
+ *
+ * Scoped class prefix: ytni-*
+ */
+
+.ytni-btn {
+  /* Top-right corner overlay on the thumbnail. */
+  /* Real implementation TBD: position, size, z-index, color. */
+}
+
+.ytni-btn.ytni-disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+  pointer-events: none;
+}

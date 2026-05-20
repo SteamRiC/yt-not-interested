@@ -1,0 +1,39 @@
+{
+  "name": "yt-not-interested",
+  "version": "0.1.0",
+  "description": "Adds quick Watched and Not interested buttons on YouTube video thumbnails.",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "lint:js": "eslint .",
+    "lint:ext": "web-ext lint --source-dir=. --self-hosted",
+    "lint": "npm run lint:js && npm run lint:ext",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "smoke": "playwright test",
+    "build": "web-ext build --source-dir=. --artifacts-dir=web-ext-artifacts --overwrite-dest",
+    "dev": "web-ext run --source-dir=. --start-url=https://www.youtube.com",
+    "release:patch": "npm version patch && npm run build",
+    "publish:cws": "chrome-webstore-upload upload --source web-ext-artifacts/*.zip --auto-publish"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.50.0",
+    "@types/chrome": "^0.0.270",
+    "chrome-webstore-upload-cli": "^3.3.0",
+    "eslint": "^9.20.0",
+    "vitest": "^3.0.0",
+    "web-ext": "^8.4.0"
+  },
+  "engines": {
+    "node": ">=20.0.0"
+  },
+  "license": "GPL-3.0-or-later",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/SteamRiC/yt-not-interested.git"
+  },
+  "homepage": "https://github.com/SteamRiC/yt-not-interested",
+  "bugs": {
+    "url": "https://github.com/SteamRiC/yt-not-interested/issues"
+  }
+}
